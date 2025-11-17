@@ -55,12 +55,25 @@ function filterActiveUsers(users: User[]): User[] {
 	return users.filter((user) => user.isActive);
 }
 
-const users = [
-	{ id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
-	{ id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
-	{ id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
-];
+interface Book {
+	title: string;
+	author: string;
+	publishedYear: number;
+	isAvailable: boolean;
+}
 
-console.log(filterActiveUsers(users));
+function printBookDetails(book: Book): void {
+	const availableText = book.isAvailable ? 'Yes' : 'No';
+	console.log(
+		`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availableText}`,
+	);
+}
 
-console.log(`----------------------------------`, users);
+const myBook: Book = {
+	title: 'The Great Gatsby',
+	author: 'F. Scott Fitzgerald',
+	publishedYear: 1925,
+	isAvailable: !false,
+};
+
+printBookDetails(myBook);
