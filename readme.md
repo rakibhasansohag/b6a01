@@ -1,4 +1,4 @@
-1) Interface vs Type in typescript 
+### 1) Interface vs Type in typescript 
 
 interface এবং type দুটোই TypeScript-এ টাইপ ডিফাইন করতে ব্যবহার করা হয়, কিন্তু ব্যবহার ও ক্ষমতায় কিছু পার্থক্য আছে:
 
@@ -21,7 +21,7 @@ type UserType ={
 	age : number | null
 }
 
-2) Explain the difference between any, unknown, and never types in TypeScript.
+### 2) Explain the difference between any, unknown, and never types in TypeScript.
 
 TypeScript-এ এই তিনটা টাইপ অনেকের কাছে একই রকম মনে হয়, কিন্তু এদের কাজ পুরো আলাদা।
 
