@@ -10,7 +10,7 @@ interface সহজে একেকটি interface একে অন্যকে
 ইউনিয়ন, টুপল বা জটিল টাইপ অপারেশন দরকার হয় তাহলে type বেশি সুবিধা দেবে। 
 
 ### example: 
-
+```
 interface User {
 	name : string;
 	age:number
@@ -20,7 +20,7 @@ type UserType ={
 	name : string;
 	age : number | null
 }
-
+```
 # 2) Explain the difference between any, unknown, and never types in TypeScript.
 
 TypeScript-এ এই তিনটা টাইপ অনেকের কাছে একই রকম মনে হয়, কিন্তু এদের কাজ পুরো আলাদা।
@@ -31,20 +31,20 @@ any মানে কোড এ টাইপ চেক করা বন্ধ ক
 কোড এর ভিতরে যা খুশি রাখবো TS কোনো ভুল ধরবে নাহ।
 
 ### example:
-
+```
 var age :any = 10;
 value = 'hi'
 value = false;
 
 console.log(value) // value = false
-
+```
 ii) unknown ভেতরে কিছুই থাকতে পারে, কিন্তু ব্যবহার করার আগে টাইপ চেক করতে হবে|
 
 unknown হলো any-র safe version.
 ভ্যালু যাই হোক সমস্যা নেই, কিন্তু ব্যবহার করার আগে TypeScript proof চাইবে।
 
 ### example:
-
+```
 let name: unknown = "rakib";
 
 // value.toUppercase() // will not allowed any string related work
@@ -52,7 +52,7 @@ let name: unknown = "rakib";
 if (typeof value === 'string'){
 	value.toUpperCase();
 }
-
+```
 iii) never এখানে কোনো ভ্যালুই আসবে না
 never মানে এমন কিছু যা কখনও ঘটে না বা ফাংশন কখনও রিটার্ন করে না।
 
