@@ -1,4 +1,4 @@
-### 1) Interface vs Type in typescript 
+# 1) Interface vs Type in typescript 
 
 interface এবং type দুটোই TypeScript-এ টাইপ ডিফাইন করতে ব্যবহার করা হয়, কিন্তু ব্যবহার ও ক্ষমতায় কিছু পার্থক্য আছে:
 
@@ -9,7 +9,7 @@ interface সহজে একেকটি interface একে অন্যকে
 ব্যবহারিক হিসেবে শুধু অবজেক্ট বা ক্লাস কনট্র্যাক্ট দরকার হলে এবং ভবিষ্যতে বড়ো হতে পারে তাহলে interface বেবহার করা উচিত। যদি
 ইউনিয়ন, টুপল বা জটিল টাইপ অপারেশন দরকার হয় তাহলে type বেশি সুবিধা দেবে। 
 
-# example: 
+### example: 
 
 interface User {
 	name : string;
@@ -21,7 +21,7 @@ type UserType ={
 	age : number | null
 }
 
-### 2) Explain the difference between any, unknown, and never types in TypeScript.
+# 2) Explain the difference between any, unknown, and never types in TypeScript.
 
 TypeScript-এ এই তিনটা টাইপ অনেকের কাছে একই রকম মনে হয়, কিন্তু এদের কাজ পুরো আলাদা।
 
@@ -30,7 +30,7 @@ i) any 'যা খুশি হবে, আমি কিছু বলব না'
 any মানে কোড এ টাইপ চেক করা বন্ধ করে দেয়।
 কোড এর ভিতরে যা খুশি রাখবো TS কোনো ভুল ধরবে নাহ।
 
-# example:
+### example:
 
 var age :any = 10;
 value = 'hi'
@@ -43,7 +43,7 @@ ii) unknown ভেতরে কিছুই থাকতে পারে, কি
 unknown হলো any-র safe version.
 ভ্যালু যাই হোক সমস্যা নেই, কিন্তু ব্যবহার করার আগে TypeScript proof চাইবে।
 
-# example:
+### example:
 
 let name: unknown = "rakib";
 
@@ -56,7 +56,7 @@ if (typeof value === 'string'){
 iii) never এখানে কোনো ভ্যালুই আসবে না
 never মানে এমন কিছু যা কখনও ঘটে না বা ফাংশন কখনও রিটার্ন করে না।
 
-# example : 
+### example : 
 
 ফাংশন সবসময় error ছোড়ে
 ফাংশন কখনও শেষ হয় না (infinite loop)
