@@ -104,3 +104,7 @@ function getUniqueValues<T extends number | string>(arr1: T[], arr2: T[]): T[] {
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
 console.log(getUniqueValues(array1, array2));
+
+const array3 = ['a', 'b', 'c', 'd', 'e'];
+const array4 = ['c', 'd', 'e', 'f', 'g'];
+console.log(getUniqueValues(array3, array4));
