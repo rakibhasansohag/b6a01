@@ -101,10 +101,35 @@ function getUniqueValues<T extends number | string>(arr1: T[], arr2: T[]): T[] {
 	return result;
 }
 
-const array1 = [1, 2, 3, 4, 5];
-const array2 = [3, 4, 5, 6, 7];
-console.log(getUniqueValues(array1, array2));
+type Product = {
+	name: string;
+	price: number;
+	quantity: number;
+	discount?: number;
+};
 
-const array3 = ['a', 'b', 'c', 'd', 'e'];
-const array4 = ['c', 'd', 'e', 'f', 'g'];
-console.log(getUniqueValues(array3, array4));
+function calculateTotalPrice(products: Product[]): number {
+	if (products.length === 0) return 0;
+
+	const total = products
+		.map((p) => {
+			const base = p.price * p.quantity;
+
+			if (typeof p.discount === 'number' && p.discount > 0) {
+				const fraction = p.discount / 100;
+				return base * (1 - fraction);
+			}
+
+			return base;
+		})
+		.reduce((a, b) => a + b, 0);
+	return total;
+}
+
+const products = [
+	{ name: 'Pen', price: 10, quantity: 2 },
+	{ name: 'Notebook', price: 25, quantity: 3, discount: 10 },
+	{ name: 'Bag', price: 50, quantity: 1, discount: 20 },
+];
+
+console.log(calculateTotalPrice(products));
